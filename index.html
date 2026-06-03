@@ -140,11 +140,14 @@
 
         <nav class="categories" id="categories-nav" aria-label="קטגוריות תפריט"></nav>
 
-        <h2 class="section-title" id="section-title">
-          <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco" aria-hidden="true">
-          <span class="section-title__text" id="section-title-text">מנות עיקריות</span>
-          <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco section-title__deco--flip" aria-hidden="true">
-        </h2>
+        <div class="section-header" id="section-header">
+          <h2 class="section-title" id="section-title">
+            <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco" aria-hidden="true">
+            <span class="section-title__text" id="section-title-text">מנות עיקריות</span>
+            <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco section-title__deco--flip" aria-hidden="true">
+          </h2>
+          <p class="section-subtitle" id="section-subtitle" hidden data-i18n="mainsNote"></p>
+        </div>
       </div>
 
       <!-- תוכן מנות -->
@@ -164,7 +167,7 @@
         <div class="cart-bar__actions">
           <div class="cart-bar__total">
             <span class="cart-bar__total-label" data-i18n="total">סה״כ</span>
-            <span class="cart-bar__total-amount" id="cart-bar-total">₪0</span>
+            <span class="cart-bar__total-amount" id="cart-bar-total">€0</span>
           </div>
           <span class="cart-bar__divider" aria-hidden="true"></span>
           <button type="button" class="cart-bar__view" id="btn-view-cart" data-i18n="viewCart">
@@ -192,7 +195,7 @@
         <div class="cart-drawer__footer">
           <div class="cart-drawer__total-row">
             <span data-i18n="total">סה״כ</span>
-            <span class="cart-drawer__total-price" id="cart-total">₪0</span>
+            <span class="cart-drawer__total-price" id="cart-total">€0</span>
           </div>
         </div>
       </div>
