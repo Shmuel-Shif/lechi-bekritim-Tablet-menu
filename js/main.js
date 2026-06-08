@@ -260,7 +260,7 @@ const MENU = [
     items: [
       { id: 'schnitzel', name: 'השניצל של השף', desc: 'חזה עוף פריך בציפוי פירורי לחם מוזהבים.', price: 22, image: dishImage('schnitzel') },
       { id: 'chicken-steak', name: 'סטייק פרגית בגריל', desc: 'נתחי פרגית עסיסיים בתיבול ים-תיכוני.', price: 24, image: dishImage('chicken-steak') },
-      { id: 'denis', name: 'פילה דניס בתנור', desc: 'דניס טרי אפוי עם עשבי תיבול ושמן זית.', price: 27, image: dishImage('denis') },
+      { id: 'denis', name: 'דניס בתנור', desc: 'דניס טרי אפוי עם עשבי תיבול ושמן זית.', price: 27, image: dishImage('denis') },
       { id: 'salmon', name: 'נתח סלמון צרוב', desc: 'פילה סלמון בזיגוג עדין.', price: 29, image: dishImage('salmon') },
       { id: 'noodles', name: 'נודלס סלמון אסייתי', desc: 'אטריות מוקפצות עם נתחי סלמון וירקות ברוטב סויה וג\'ינג\'ר.', price: 18, image: dishImage('noodles') },
     ],
