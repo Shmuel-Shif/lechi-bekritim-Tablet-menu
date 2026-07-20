@@ -9,9 +9,12 @@ const TRANSLATIONS = {
   he: {
     bh: 'ב״ה',
     welcome: 'ברוכים הבאים',
+    heroRestaurant: 'מסעדת לחיים בכרתים',
+    kosher: 'כשר למהדרין',
+    hoursDisplay: '14:00–21:00',
     restaurantName: 'לחיים בכריתים',
     pageTitle: 'לחיים בכריתים',
-    toMenu: 'לתפריט',
+    toMenu: 'צפייה בתפריט',
     search: 'חיפוש',
     myCart: 'הסל שלי',
     cartTitle: 'ההזמנה שלך',
@@ -30,27 +33,39 @@ const TRANSLATIONS = {
     langToggleAria: 'החלפת שפה – עברית / English',
     close: 'סגור',
     backHome: 'חזרה למסך הבית',
-    mainsNote: 'כל המנות העיקריות מוגשות עם בחירה בין שתי תוספות חמות (למעט מנת הנודלס).',
+    mainsNote: 'כל המנות העיקריות מוגשות עם תוספת אחת חמה (למעט שיפודי קבב ומוקפץ עוף).',
+    mainsSidesTitle: 'תוספות לבחירה',
+    mainsSidesList: "צ'יפס פריך | אורז לבן | שעועית ירוקה | פירה | ירקות בתנור",
+    sidesIncluded: 'כלול',
+    sidesIncludedNote: 'כלול במנה העיקרית',
+    chooseSidesTitle: 'בחרו תוספת חמה',
+    chooseSidesSubtitle: 'תוספת אחת למנה: {name}',
+    sidesSelected: '{count} מתוך 1 נבחרו',
+    sidesContinue: 'המשך',
+    chooseMainFirst: 'יש לבחור מנה עיקרית לפני תוספת חמה',
     addToCart: 'הוסף {name}',
     addToCartModal: 'הוסף לסל',
     decrease: 'הפחת כמות',
     increase: 'הוסף כמות',
     sideForMain: 'תוספת ל־{name}',
     servedWith: 'מוגש עם: {sides}',
-    maxSidesPerMain: 'ניתן לבחור עד שתי תוספות חמות לכל מנה עיקרית',
+    maxSidesPerMain: 'ניתן לבחור תוספת חמה אחת לכל מנה עיקרית',
     categories: {
-      mains: 'מנות עיקריות',
       starters: 'ראשונות ונשנושים',
-      salads: 'סלטים וטורטיות',
+      mains: 'מנות עיקריות',
+      salads: 'סלטים',
       desserts: 'קינוחים',
       coldDrinks: 'שתייה קלה',
       hotDrinks: 'שתייה חמה',
-      hotSides: 'תוספות חמות',
+      hotSides: 'תוספות חמות לבחירה',
     },
   },
   en: {
     bh: 'B"H',
     welcome: 'Welcome',
+    heroRestaurant: 'Lechaim Restaurant in Crete',
+    kosher: 'Mehadrin Kosher',
+    hoursDisplay: '14:00–21:00',
     restaurantName: 'LeChaim in Keri',
     pageTitle: 'LeChaim in Keri',
     toMenu: 'View Menu',
@@ -72,22 +87,31 @@ const TRANSLATIONS = {
     langToggleAria: 'Switch language – Hebrew / English',
     close: 'Close',
     backHome: 'Back to home',
-    mainsNote: 'All main courses are served with a choice of two hot sides (except noodles).',
+    mainsNote: 'All main courses are served with one hot side (except kebab skewers and stir-fried chicken).',
+    mainsSidesTitle: 'Sides to choose from',
+    mainsSidesList: 'Crispy fries | White rice | Green beans | Mashed potatoes | Oven vegetables',
+    sidesIncluded: 'Included',
+    sidesIncludedNote: 'Included with the main course',
+    chooseSidesTitle: 'Choose a hot side',
+    chooseSidesSubtitle: 'One side for: {name}',
+    sidesSelected: '{count} of 1 selected',
+    sidesContinue: 'Continue',
+    chooseMainFirst: 'Choose a main course before adding a hot side',
     addToCart: 'Add {name}',
     addToCartModal: 'Add to cart',
     decrease: 'Decrease quantity',
     increase: 'Increase quantity',
     sideForMain: 'Side for {name}',
     servedWith: 'Served with: {sides}',
-    maxSidesPerMain: 'Up to two hot sides per main course',
+    maxSidesPerMain: 'One hot side per main course',
     categories: {
-      mains: 'Main Courses',
       starters: 'Starters & Snacks',
-      salads: 'Salads & Tortillas',
+      mains: 'Main Courses',
+      salads: 'Salads',
       desserts: 'Desserts',
       coldDrinks: 'Soft Drinks',
       hotDrinks: 'Hot Drinks',
-      hotSides: 'Hot Sides',
+      hotSides: 'Hot Sides to Choose',
     },
   },
 };
@@ -96,35 +120,41 @@ const TRANSLATIONS = {
 const DISH_I18N = {
   en: {
     'salad-plate': { name: 'Opening Salad Platter', desc: 'Selection of refreshing house salads with warm pitas (recommended for the table center)' },
-    hummus: { name: 'House Hummus', desc: 'Creamy handmade hummus served with olive oil, cumin and pitas' },
-    antipasti: { name: 'Colorful Antipasti', desc: 'Seasonal vegetables roasted in the oven with herbs' },
+    hummus: { name: 'House Hummus', desc: 'Creamy handmade hummus, served with olive oil, cumin and pitas' },
+    'hummus-egg': { name: 'Hummus with Egg', desc: 'Creamy handmade hummus, served with olive oil, cumin and pitas, topped with egg' },
+    'hummus-meat': { name: 'Hummus with Meat', desc: 'Creamy handmade hummus, served with olive oil, cumin and pitas, topped with meat' },
     mushrooms: { name: 'Hot Mushrooms', desc: 'Fresh mushrooms sautéed in garlic, olive oil and parsley' },
     'fries-classic': { name: 'Classic Fries', desc: 'Crispy potato fries' },
     'fries-side': { name: 'Crispy Fries', desc: '' },
     schnitzel: { name: "Chef's Schnitzel", desc: 'Crispy chicken breast in golden breadcrumb coating' },
-    'chicken-steak': { name: 'Grilled Chicken Steak', desc: 'Juicy chicken cuts with Mediterranean seasoning' },
-    denis: { name: 'Baked Sea Bream Fillet', desc: 'Fresh sea bream baked with herbs and olive oil' },
-    salmon: { name: 'Seared Salmon', desc: 'Salmon fillet with light glaze' },
-    noodles: { name: 'Asian Salmon Noodles', desc: 'Stir-fried noodles with salmon, vegetables, soy and ginger sauce' },
-    'white-rice': { name: 'Juicy White Rice', desc: 'Fluffy white rice' },
-    'green-beans': { name: 'Sautéed Green Beans', desc: 'Green beans sautéed in garlic oil' },
-    'baked-potatoes': { name: 'Baked Potatoes', desc: 'Oven-baked potatoes' },
-    'tortilla-salmon': { name: 'Salmon & Avocado Tortilla', desc: 'Quality salmon, creamy avocado, vegetables and delicate sauce in a warm tortilla' },
+    'chicken-steak': { name: 'Grilled Chicken Steak', desc: 'Juicy chicken cut with Mediterranean seasoning' },
+    denis: { name: 'Whole Baked Sea Bream', desc: 'Fresh sea bream baked with herbs and olive oil' },
+    'denis-fillet': { name: 'Oven-Baked Sea Bream Fillet', desc: 'Sea bream fillet baked with green herbs and olive oil' },
+    salmon: { name: 'Oven-Baked Salmon', desc: 'Salmon fillet baked with delicate seasoning' },
+    kebab: { name: 'Kebab Skewers', desc: 'Served with tahini and a small side salad' },
+    'chicken-stirfry': { name: 'Stir-Fried Chicken', desc: 'Chicken pieces stir-fried with vegetables in soy and ginger sauce' },
+    'white-rice': { name: 'White Rice', desc: '' },
+    'green-beans': { name: 'Green Beans', desc: '' },
+    puree: { name: 'Mashed Potatoes', desc: '' },
+    'oven-vegetables': { name: 'Oven Vegetables', desc: '' },
     'chicken-salad': { name: 'Rich Chicken Salad', desc: 'Warm chicken on lettuce with seasonal vegetables and vinaigrette' },
-    'israeli-salad': { name: 'Israeli Chopped Salad with Herbs', desc: '' },
-    'green-salad': { name: 'Green Leaf Salad with Vinaigrette', desc: '' },
+    'israeli-salad': { name: 'Israeli Chopped Salad', desc: 'Fresh chopped vegetable salad with herbs' },
+    'green-salad': { name: 'Green Salad', desc: 'Selection of fresh leaves with vinaigrette' },
+    'market-salad': { name: 'Market Salad', desc: 'Fresh seasonal vegetables' },
     'fruit-plate': { name: 'Seasonal Fruit Platter', desc: 'Selection of fresh, refreshing cut fruits' },
     coke: { name: 'Coca-Cola', desc: '' },
     'coke-zero': { name: 'Coke Zero', desc: '' },
-    fuzetea: { name: 'Fuze Tea', desc: '' },
+    fanta: { name: 'Fanta', desc: '' },
+    sprite: { name: 'Sprite', desc: '' },
+    'red-bull': { name: 'Red Bull', desc: '' },
+    heineken: { name: 'Heineken', desc: '' },
+    corona: { name: 'Corona', desc: '' },
     soda: { name: 'Soda', desc: '' },
     water: { name: 'Mineral Water', desc: '' },
-    'fruit-shake': { name: 'Refreshing Fruit Shake', desc: 'Water / orange / soy base (ask the waiter about today\'s fruits)' },
-    espresso: { name: 'Espresso', desc: '(soy milk available)' },
-    cappuccino: { name: 'Cappuccino', desc: '(soy milk available)' },
+    'fruit-shake': { name: 'Refreshing Fruit Shake', desc: 'Water / orange / soda base (depending on available fruits)' },
+    'espresso-hafukh': { name: 'Espresso / Hafukh', desc: '' },
     'black-coffee': { name: 'Black Coffee', desc: '' },
     'mint-tea': { name: 'Hot Mint Tea', desc: '' },
-    'iced-coffee': { name: 'Iced Coffee', desc: '(soy milk base)' },
   },
 };
 
@@ -225,11 +255,15 @@ function refreshLocalizedUI() {
     if (item) {
       els.dishModalImage.alt = getItemName(item);
       els.dishModalTitle.textContent = getItemName(item);
-      els.dishModalDesc.textContent = getItemDesc(item);
-      els.dishModalPrice.textContent = formatPrice(item.price);
+      const desc = getItemDesc(item);
+      els.dishModalDesc.textContent = desc;
+      els.dishModalDesc.hidden = !desc;
+      els.dishModalPrice.textContent = formatDishPrice(item.price);
       updateDishModalAddBtn();
     }
   }
+
+  if (state.openSidesMainLineId) refreshSidesModal();
 }
 
 /** נתיב תמונת מנה (WebP) */
@@ -247,31 +281,35 @@ const MENU = [
     id: 'starters',
     labelKey: 'categories.starters',
     items: [
-      { id: 'salad-plate', name: 'פלטת סלטים פתיחה', desc: 'מבחר סלטי הבית המרעננים לצד פיתות חמות (מומלץ למרכז שולחן).', price: 12, image: dishImage('salad-plate') },
-      { id: 'hummus', name: 'חומוס הבית', desc: 'חומוס קרמי בעבודת יד, מוגש עם שמן זית, כמון ופיתות.', price: 12, image: dishImage('hummus') },
-      { id: 'antipasti', name: 'אנטיפסטי צבעוני', desc: 'לקט ירקות העונה קלויים בתנור עם עשבי תיבול.', price: 12, image: dishImage('antipasti') },
-      { id: 'mushrooms', name: 'פטריות חמות', desc: 'פטריות טריות מוקפצות בשום, שמן זית ופטרוזיליה.', price: 8, image: dishImage('mushrooms') },
-      { id: 'fries-classic', name: "צ'יפס קלאסי", desc: 'מנת תפוחי אדמה פריכים.', price: 8, image: dishImage('fries') },
+      { id: 'salad-plate', name: 'פלטת סלטים פתיחה', desc: 'מבחר סלטי הבית המרעננים לצד פיתות חמות (מומלץ למרכז שולחן).', price: 15, image: dishImage('salad-plate') },
+      { id: 'hummus', name: 'חומוס הבית', desc: 'חומוס קרמי בעבודת יד, מוגש עם שמן זית, כמון ופיתות.', price: 15, image: dishImage('hummus') },
+      { id: 'hummus-egg', name: 'חומוס עם ביצה', desc: 'חומוס קרמי בעבודת יד, מוגש עם שמן זית, כמון ופיתות בתוספת ביצה.', price: 17, image: dishImage('hummus-egg') },
+      { id: 'hummus-meat', name: 'חומוס בשר', desc: 'חומוס קרמי בעבודת יד, מוגש עם שמן זית, כמון ופיתות בתוספת בשר.', price: 19, image: dishImage('hummus-meat') },
+      { id: 'mushrooms', name: 'פטריות חמות', desc: 'פטריות טריות מוקפצות בשום, שמן זית ופטרוזיליה.', price: 10, image: dishImage('mushrooms') },
+      { id: 'fries-classic', name: "צ'יפס קלאסי", desc: 'מנת תפוחי אדמה פריכים.', price: 10, image: dishImage('fries') },
     ],
   },
   {
     id: 'mains',
     labelKey: 'categories.mains',
     items: [
-      { id: 'schnitzel', name: 'השניצל של השף', desc: 'חזה עוף פריך בציפוי פירורי לחם מוזהבים.', price: 22, image: dishImage('schnitzel') },
-      { id: 'chicken-steak', name: 'סטייק פרגית בגריל', desc: 'נתחי פרגית עסיסיים בתיבול ים-תיכוני.', price: 24, image: dishImage('chicken-steak') },
-      { id: 'denis', name: 'דניס בתנור', desc: 'דניס טרי אפוי עם עשבי תיבול ושמן זית.', price: 27, image: dishImage('denis') },
-      { id: 'salmon', name: 'נתח סלמון צרוב', desc: 'פילה סלמון בזיגוג עדין.', price: 29, image: dishImage('salmon') },
-      { id: 'noodles', name: 'נודלס סלמון אסייתי', desc: 'אטריות מוקפצות עם נתחי סלמון וירקות ברוטב סויה וג\'ינג\'ר.', price: 18, image: dishImage('noodles') },
+      { id: 'schnitzel', name: 'שניצל של השף', desc: 'חזה עוף פריך בציפוי פירורי לחם מוזהבים.', price: 25, image: dishImage('schnitzel') },
+      { id: 'chicken-steak', name: 'סטייק פרגית בגריל', desc: 'נתח פרגית עסיסי בתיבול ים־תיכוני.', price: 26, image: dishImage('chicken-steak') },
+      { id: 'denis', name: 'דג שלם בתנור', desc: 'דניס טרי אפוי עם עשבי תיבול ושמן זית.', price: 29, image: dishImage('denis') },
+      { id: 'denis-fillet', name: 'פילה דניס בתנור', desc: 'פילה דניס בתנור בעשבי תיבול ירוקים ושמן זית.', price: 29, image: dishImage('denis-fillet') },
+      { id: 'salmon', name: 'נתח סלמון בתנור', desc: 'פילה סלמון אפוי בתיבול עדין.', price: 29, image: dishImage('salmon') },
+      { id: 'kebab', name: 'שיפודי קבב', desc: 'מוגש לצד טחינה וסלטון קטן.', price: 27, image: dishImage('kebab') },
+      { id: 'chicken-stirfry', name: 'מוקפץ עוף', desc: 'נתחי עוף מוקפצים עם ירקות ברוטב סויה וג\'ינג\'ר.', price: 20, image: dishImage('chicken-stirfry') },
     ],
     sections: [
       {
         labelKey: 'categories.hotSides',
         items: [
           { id: 'fries-side', name: "צ'יפס פריך", desc: '', price: 0, image: dishImage('fries') },
-          { id: 'white-rice', name: 'אורז לבן עסיסי', desc: '', price: 0, image: dishImage('white-rice') },
-          { id: 'baked-potatoes', name: 'תפוחי אדמה אפויים', desc: '', price: 0, image: dishImage('baked-potatoes') },
-          { id: 'green-beans', name: 'שעועית ירוקה מוקפצת', desc: '', price: 0, image: dishImage('green-beans') },
+          { id: 'white-rice', name: 'אורז לבן', desc: '', price: 0, image: dishImage('white-rice') },
+          { id: 'green-beans', name: 'שעועית ירוקה', desc: '', price: 0, image: dishImage('green-beans') },
+          { id: 'puree', name: 'פירה', desc: '', price: 0, image: dishImage('puree') },
+          { id: 'oven-vegetables', name: 'ירקות בתנור', desc: '', price: 0, image: dishImage('oven-vegetables') },
         ],
       },
     ],
@@ -280,10 +318,10 @@ const MENU = [
     id: 'salads',
     labelKey: 'categories.salads',
     items: [
-      { id: 'tortilla-salmon', name: 'טורטייה סלמון ואבוקדו', desc: 'סלמון איכותי, אבוקדו קרמי, ירקות ורוטב עדין עטופים בטורטייה חמה.', price: 14, image: dishImage('tortilla-salmon') },
-      { id: 'chicken-salad', name: 'סלט פרגית עשיר', desc: 'נתחי פרגית חמים על מצע חסות, ירקות העונה ורוטב ויניגרט.', price: 14, image: dishImage('chicken-salad') },
-      { id: 'israeli-salad', name: 'סלט קצוץ ישראלי עם עשבי תיבול', desc: '', price: 9, image: dishImage('israeli-salad') },
-      { id: 'green-salad', name: 'סלט עלים ירוקים עם רוטב וינגרט', desc: '', price: 9, image: dishImage('green-salad') },
+      { id: 'chicken-salad', name: 'סלט פרגית עשיר', desc: 'נתחי פרגית חמים על מצע חסות, ירקות העונה ורוטב ויניגרט.', price: 18, image: dishImage('chicken-salad') },
+      { id: 'israeli-salad', name: 'סלט קצוץ ישראלי', desc: 'סלט ירקות קצוץ טרי עם עשבי תיבול.', price: 10, image: dishImage('israeli-salad') },
+      { id: 'green-salad', name: 'סלט ירוק', desc: 'מבחר עלים טריים עם רוטב ויניגרט.', price: 9, image: dishImage('green-salad') },
+      { id: 'market-salad', name: 'סלט שוק', desc: 'ירקות העונה טריים.', price: 9, image: dishImage('market-salad') },
     ],
   },
   {
@@ -297,31 +335,33 @@ const MENU = [
     id: 'coldDrinks',
     labelKey: 'categories.coldDrinks',
     items: [
-      { id: 'coke', name: 'קוקה קולה', desc: '', price: 2, image: dishImage('coke') },
-      { id: 'coke-zero', name: 'קולה זירו', desc: '', price: 2, image: dishImage('coke-zero') },
-      { id: 'fuzetea', name: 'פיוזטי', desc: '', price: 2, image: dishImage('fuzetea') },
-      { id: 'soda', name: 'סודה', desc: '', price: 2, image: dishImage('soda') },
-      { id: 'water', name: 'מים מינרליים', desc: '', price: 2, image: dishImage('water') },
-      { id: 'fruit-shake', name: 'שייק פירות מרענן', desc: 'על בסיס מים / תפוזים / סויה (שאלו את המלצר על הפירות של היום).', price: 8, image: dishImage('fruit-shake') },
+      { id: 'coke', name: 'קוקה קולה', desc: '', price: 3, image: dishImage('coke') },
+      { id: 'coke-zero', name: 'קולה זירו', desc: '', price: 3, image: dishImage('coke-zero') },
+      { id: 'fanta', name: 'פאנטה', desc: '', price: 3, image: dishImage('fanta') },
+      { id: 'sprite', name: 'ספרייט', desc: '', price: 3, image: dishImage('sprite') },
+      { id: 'red-bull', name: 'רד בול', desc: '', price: 3, image: dishImage('red-bull') },
+      { id: 'heineken', name: 'בירה הייניקן', desc: '', price: 4, image: dishImage('heineken') },
+      { id: 'corona', name: 'בירה קורונה', desc: '', price: 4, image: dishImage('corona') },
+      { id: 'soda', name: 'סודה', desc: '', price: 3, image: dishImage('soda') },
+      { id: 'water', name: 'מים מינרליים', desc: '', price: 3, image: dishImage('water') },
+      { id: 'fruit-shake', name: 'שייק פירות מרענן', desc: 'על בסיס מים / תפוזים / סודה (בהתאם לפירות הזמינים).', price: 8, image: dishImage('fruit-shake') },
     ],
   },
   {
     id: 'hotDrinks',
     labelKey: 'categories.hotDrinks',
     items: [
-      { id: 'espresso', name: 'אספרסו', desc: '(אפשרות לחלב סויה).', price: 5, image: dishImage('espresso') },
-      { id: 'cappuccino', name: 'קפה הפוך', desc: '(אפשרות לחלב סויה).', price: 5, image: dishImage('cappuccino') },
+      { id: 'espresso-hafukh', name: 'קפה אספרסו / הפוך', desc: '', price: 5, image: dishImage('cappuccino') },
       { id: 'black-coffee', name: 'קפה שחור', desc: '', price: 5, image: dishImage('black-coffee') },
       { id: 'mint-tea', name: 'תה חם עם נענע', desc: '', price: 5, image: dishImage('mint-tea') },
-      { id: 'iced-coffee', name: 'קפה קר מרענן', desc: '(על בסיס חלב סויה).', price: 8, image: dishImage('iced-coffee') },
     ],
   },
 ];
 
-/** מנות עיקריות הזכאיות לשתי תוספות חמות (ללא נודלס) */
-const MAIN_COURSE_IDS = new Set(['schnitzel', 'chicken-steak', 'denis', 'salmon']);
-const HOT_SIDE_IDS = new Set(['fries-side', 'white-rice', 'baked-potatoes', 'green-beans']);
-const MAX_SIDES_PER_MAIN = 2;
+/** מנות עיקריות הזכאיות לתוספת חמה אחת */
+const MAIN_COURSE_IDS = new Set(['schnitzel', 'chicken-steak', 'denis', 'denis-fillet', 'salmon']);
+const HOT_SIDE_IDS = new Set(['fries-side', 'white-rice', 'green-beans', 'puree', 'oven-vegetables']);
+const MAX_SIDES_PER_MAIN = 1;
 
 function isMainCourse(itemId) {
   return MAIN_COURSE_IDS.has(itemId);
@@ -351,6 +391,7 @@ const state = {
   cartDrawerOpen: false,
   searchOpen: false,
   dishModalId: null,
+  openSidesMainLineId: null,
 };
 
 function moveCartLineToTop(lineId) {
@@ -405,10 +446,181 @@ function removeCartLine(lineId) {
       state.cartLineOrder = state.cartLineOrder.filter((id) => id !== sideLine.lineId);
     });
     if (state.lastMainLineId === lineId) state.lastMainLineId = null;
+    if (state.openSidesMainLineId === lineId) closeSidesModal();
   }
 
   state.cartLines = state.cartLines.filter((l) => l.lineId !== lineId);
   state.cartLineOrder = state.cartLineOrder.filter((id) => id !== lineId);
+}
+
+function escapeHtml(text) {
+  return String(text ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function escapeAttr(text) {
+  return escapeHtml(text);
+}
+
+function getHotSideItems() {
+  const mains = MENU.find((c) => c.id === 'mains');
+  const section = mains?.sections?.find((s) => s.labelKey === 'categories.hotSides');
+  return section?.items || [];
+}
+
+function getSideQtyForMain(mainLineId, sideItemId) {
+  const line = state.cartLines.find(
+    (l) => l.linkedToMainLineId === mainLineId && l.itemId === sideItemId
+  );
+  return line ? line.qty : 0;
+}
+
+function addSideToMainLine(mainLineId, sideItemId) {
+  const otherSides = state.cartLines.filter(
+    (l) => l.linkedToMainLineId === mainLineId && l.itemId !== sideItemId
+  );
+  otherSides.forEach((line) => removeCartLine(line.lineId));
+
+  if (!canAddSideToMain(mainLineId)) {
+    showToast(t('maxSidesPerMain'));
+    return false;
+  }
+
+  const existing = state.cartLines.find(
+    (l) => l.linkedToMainLineId === mainLineId && l.itemId === sideItemId
+  );
+
+  if (existing) {
+    existing.qty += 1;
+    moveCartLineToTop(existing.lineId);
+  } else {
+    const lineId = createCartLineId();
+    state.cartLines.push({
+      lineId,
+      itemId: sideItemId,
+      qty: 1,
+      linkedToMainLineId: mainLineId,
+    });
+    moveCartLineToTop(lineId);
+  }
+
+  updateCart();
+  refreshSidesModal();
+  return true;
+}
+
+function removeSideFromMainLine(mainLineId, sideItemId) {
+  const line = state.cartLines.find(
+    (l) => l.linkedToMainLineId === mainLineId && l.itemId === sideItemId
+  );
+  if (!line) return;
+
+  if (line.qty <= 1) {
+    removeCartLine(line.lineId);
+  } else {
+    line.qty -= 1;
+  }
+
+  updateCart();
+  refreshSidesModal();
+}
+
+function renderSidesModal() {
+  if (!els.sidesModalBody || !state.openSidesMainLineId) return;
+
+  const mainLine = findCartLine(state.openSidesMainLineId);
+  if (!mainLine) {
+    closeSidesModal();
+    return;
+  }
+
+  const mainItem = findItem(mainLine.itemId);
+  if (!mainItem) {
+    closeSidesModal();
+    return;
+  }
+
+  const selectedCount = countSidesForMain(state.openSidesMainLineId);
+  const cellsHtml = getHotSideItems().map((side) => {
+    const qty = getSideQtyForMain(state.openSidesMainLineId, side.id);
+    const selected = qty > 0;
+    const imgPath = side.image || DEFAULT_DISH_IMAGE;
+
+    return `
+      <button
+        type="button"
+        class="sides-picker-cell${selected ? ' is-selected' : ''}"
+        data-action="toggle-side"
+        data-item-id="${escapeAttr(side.id)}"
+        aria-pressed="${selected ? 'true' : 'false'}"
+      >
+        <span class="sides-picker-thumb">
+          <img class="sides-picker-image" src="${escapeAttr(imgPath)}" alt="" loading="lazy" width="72" height="72">
+        </span>
+        <span class="sides-picker-name">${escapeHtml(getItemName(side))}</span>
+        <span class="sides-picker-check" aria-hidden="true">${selected ? '✓' : ''}</span>
+      </button>
+    `;
+  }).join('');
+
+  els.sidesModalBody.innerHTML = `
+    <div class="sides-modal__content">
+      <header class="sides-modal__header">
+        <h2 id="sides-modal-title" class="sides-modal__title">${escapeHtml(t('chooseSidesTitle'))}</h2>
+        <p class="sides-modal__subtitle">${escapeHtml(tReplace('chooseSidesSubtitle', { name: getItemName(mainItem) }))}</p>
+        <p class="sides-modal__count" aria-live="polite">${escapeHtml(tReplace('sidesSelected', { count: String(selectedCount) }))}</p>
+      </header>
+      <div class="sides-picker-table" role="group" aria-label="${escapeAttr(t('chooseSidesTitle'))}">
+        ${cellsHtml}
+      </div>
+      <footer class="sides-modal__footer">
+        <button type="button" class="btn btn--navy sides-modal__continue" data-action="sides-continue">
+          ${escapeHtml(t('sidesContinue'))}
+        </button>
+      </footer>
+    </div>
+  `;
+}
+
+function refreshSidesModal() {
+  if (!state.openSidesMainLineId || els.sidesModal?.hidden) return;
+  renderSidesModal();
+}
+
+function openSidesModal(mainLineId) {
+  if (!els.sidesModal || !els.sidesModalBody) return;
+
+  state.openSidesMainLineId = mainLineId;
+  state.lastMainLineId = mainLineId;
+
+  closeDishModal();
+  renderSidesModal();
+
+  els.sidesModal.hidden = false;
+  els.sidesModal.setAttribute('aria-hidden', 'false');
+
+  requestAnimationFrame(() => {
+    els.sidesModal.classList.add('sides-modal--open');
+    els.btnCloseSidesModal?.focus();
+  });
+}
+
+function closeSidesModal() {
+  if (!els.sidesModal || els.sidesModal.hidden) return;
+
+  state.openSidesMainLineId = null;
+  els.sidesModal.classList.remove('sides-modal--open');
+  els.sidesModal.setAttribute('aria-hidden', 'true');
+
+  window.setTimeout(() => {
+    if (els.sidesModal.classList.contains('sides-modal--open')) return;
+    els.sidesModal.hidden = true;
+    els.sidesModalBody.replaceChildren();
+  }, 280);
 }
 
 /* ============================================================
@@ -454,6 +666,10 @@ const els = {
   dishModalPrice: document.getElementById('dish-modal-price'),
   btnCloseDishModal: document.getElementById('btn-close-dish-modal'),
   btnModalAdd: document.getElementById('btn-modal-add'),
+  sidesModal: document.getElementById('sides-modal'),
+  sidesModalBody: document.getElementById('sides-modal-body'),
+  sidesModalBackdrop: document.getElementById('sides-modal-backdrop'),
+  btnCloseSidesModal: document.getElementById('btn-close-sides-modal'),
 };
 
 /* ============================================================
@@ -477,8 +693,15 @@ function formatPrice(amount) {
   return `${t('currency')}${amount}`;
 }
 
+function formatDishPrice(amount) {
+  if (amount === 0) return t('sidesIncluded');
+  return formatPrice(amount);
+}
+
 function getCartItemCount() {
-  return state.cartLines.reduce((sum, l) => sum + l.qty, 0);
+  return state.cartLines
+    .filter((l) => !isHotSide(l.itemId))
+    .reduce((sum, l) => sum + l.qty, 0);
 }
 
 function getCartTotal() {
@@ -580,6 +803,7 @@ function showMenu() {
 
 function showHome() {
   closeDishModal();
+  closeSidesModal();
   closeCartDrawer();
   if (state.searchOpen) closeSearch();
   els.menuScreen.classList.remove('screen--active');
@@ -617,7 +841,13 @@ function updateSectionTitle() {
   if (els.sectionSubtitle) {
     els.sectionSubtitle.hidden = !showMainsNote;
     if (showMainsNote) {
-      els.sectionSubtitle.textContent = t('mainsNote');
+      els.sectionSubtitle.innerHTML = `
+        <p class="section-subtitle__note">${escapeHtml(t('mainsNote'))}</p>
+        <p class="section-subtitle__sides-title">${escapeHtml(t('mainsSidesTitle'))}</p>
+        <p class="section-subtitle__sides-list">${escapeHtml(t('mainsSidesList'))}</p>
+      `;
+    } else {
+      els.sectionSubtitle.innerHTML = '';
     }
   }
 }
@@ -629,6 +859,7 @@ function getFilteredItems() {
     const items = [];
     MENU.forEach((cat) => {
       getCategoryItems(cat).forEach((item) => {
+        if (isHotSide(item.id)) return;
         if (getItemName(item).toLowerCase().includes(query)) {
           items.push(item);
         }
@@ -643,12 +874,16 @@ function getFilteredItems() {
 
 function renderSubsectionTitle(labelKey) {
   const label = t(labelKey);
+  const note = labelKey === 'categories.hotSides'
+    ? `<p class="dishes-subsection-note">${t('sidesIncludedNote')}</p>`
+    : '';
   return `
     <h3 class="section-title dishes-subsection-title">
       <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco" aria-hidden="true">
       <span class="section-title__text">${label}</span>
       <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco section-title__deco--flip" aria-hidden="true">
     </h3>
+    ${note}
   `;
 }
 
@@ -675,6 +910,10 @@ function renderDishCard(item) {
   const qty = getCartQtyForItem(item.id);
   const imgPath = item.image || DEFAULT_DISH_IMAGE;
   const inCartClass = qty > 0 ? ' dish-card--in-cart' : '';
+  const desc = getItemDesc(item);
+  const descHtml = desc
+    ? `<p class="dish-card__desc">${desc}</p>`
+    : '';
 
   return `
     <article class="dish-card${inCartClass}" role="listitem" data-id="${item.id}">
@@ -688,14 +927,55 @@ function renderDishCard(item) {
       </div>
       <div class="dish-card__body">
         <h3 class="dish-card__name">${getItemName(item)}</h3>
-        <p class="dish-card__desc">${getItemDesc(item)}</p>
+        ${descHtml}
         <div class="dish-card__footer">
-          <span class="dish-card__price">${formatPrice(item.price)}</span>
+          <span class="dish-card__price">${formatDishPrice(item.price)}</span>
           ${renderDishCardActions(item)}
         </div>
       </div>
     </article>
   `;
+}
+
+/** מעדכן רק את כפתורי הכמות בכרטיס — בלי לרנדר מחדש את כל הרשת (מונע קפיצות) */
+function updateDishCardActions(card, item) {
+  if (!card || !item) return;
+
+  const qty = getCartQtyForItem(item.id);
+  card.classList.toggle('dish-card--in-cart', qty > 0);
+
+  const footer = card.querySelector('.dish-card__footer');
+  if (!footer) return;
+
+  const priceEl = footer.querySelector('.dish-card__price');
+  const priceHtml = priceEl
+    ? priceEl.outerHTML
+    : `<span class="dish-card__price">${formatDishPrice(item.price)}</span>`;
+
+  footer.innerHTML = `${priceHtml}${renderDishCardActions(item)}`;
+}
+
+function refreshDishCard(itemId) {
+  if (!itemId) return;
+  const item = findItem(itemId);
+  if (!item) return;
+
+  els.dishesGrid.querySelectorAll(`.dish-card[data-id="${CSS.escape(itemId)}"]`).forEach((card) => {
+    updateDishCardActions(card, item);
+  });
+}
+
+function refreshDishCards(itemIds) {
+  if (itemIds == null) {
+    els.dishesGrid.querySelectorAll('.dish-card[data-id]').forEach((card) => {
+      const item = findItem(card.dataset.id);
+      if (item) updateDishCardActions(card, item);
+    });
+    return;
+  }
+
+  const ids = Array.isArray(itemIds) ? itemIds : [itemIds];
+  ids.forEach(refreshDishCard);
 }
 
 function changeItemQuantity(itemId, delta) {
@@ -725,10 +1005,7 @@ function renderDishesGridHtml() {
 
   let html = category.items.map(renderDishCard).join('');
 
-  category.sections?.forEach((section) => {
-    html += renderSubsectionTitle(section.labelKey);
-    html += section.items.map(renderDishCard).join('');
-  });
+  // תוספות חמות נבחרות במודאל בלבד — בלי כותרת/כרטיסים בתפריט
 
   return html;
 }
@@ -751,39 +1028,37 @@ function renderDishes() {
    סל
    ============================================================ */
 function addToCart(itemId) {
+  let newMainLineId = null;
+
   if (isMainCourse(itemId)) {
     const lineId = createCartLineId();
     state.cartLines.push({ lineId, itemId, qty: 1, linkedToMainLineId: null });
     moveCartLineToTop(lineId);
     state.lastMainLineId = lineId;
+    newMainLineId = lineId;
   } else if (isHotSide(itemId)) {
-    const mainLineId = findMainLineForNewSide();
-    if (!mainLineId || !canAddSideToMain(mainLineId)) {
-      showToast(t('maxSidesPerMain'));
+    let mainLineId = null;
+    if (state.lastMainLineId) {
+      const last = findCartLine(state.lastMainLineId);
+      if (last && isMainCourse(last.itemId)) mainLineId = last.lineId;
+    }
+    if (!mainLineId) {
+      for (const lineId of state.cartLineOrder) {
+        const line = findCartLine(lineId);
+        if (line && isMainCourse(line.itemId)) {
+          mainLineId = line.lineId;
+          break;
+        }
+      }
+    }
+
+    if (!mainLineId) {
+      showToast(t('chooseMainFirst'));
       return;
     }
 
-    const existing = state.cartLines.find(
-      (l) => l.itemId === itemId && l.linkedToMainLineId === mainLineId
-    );
-
-    if (existing) {
-      if (!canAddSideToMain(mainLineId)) {
-        showToast(t('maxSidesPerMain'));
-        return;
-      }
-      existing.qty += 1;
-      moveCartLineToTop(existing.lineId);
-    } else {
-      const lineId = createCartLineId();
-      state.cartLines.push({
-        lineId,
-        itemId,
-        qty: 1,
-        linkedToMainLineId: mainLineId,
-      });
-      moveCartLineToTop(lineId);
-    }
+    openSidesModal(mainLineId);
+    return;
   } else {
     const existing = state.cartLines.find(
       (l) => l.itemId === itemId && !l.linkedToMainLineId && !isMainCourse(l.itemId)
@@ -800,8 +1075,14 @@ function addToCart(itemId) {
   }
 
   updateCart();
-  renderDishes();
-  updateDishModalAddBtn();
+  if (!isHotSide(itemId)) {
+    refreshDishCard(itemId);
+    updateDishModalAddBtn();
+  }
+
+  if (newMainLineId) {
+    openSidesModal(newMainLineId);
+  }
 }
 
 /* ============================================================
@@ -825,8 +1106,10 @@ function openDishModal(itemId) {
   els.dishModalImage.src = item.image || DEFAULT_DISH_IMAGE;
   els.dishModalImage.alt = getItemName(item);
   els.dishModalTitle.textContent = getItemName(item);
-  els.dishModalDesc.textContent = getItemDesc(item);
-  els.dishModalPrice.textContent = formatPrice(item.price);
+  const desc = getItemDesc(item);
+  els.dishModalDesc.textContent = desc;
+  els.dishModalDesc.hidden = !desc;
+  els.dishModalPrice.textContent = formatDishPrice(item.price);
   updateDishModalAddBtn();
 
   els.dishModal.classList.add('dish-modal--open');
@@ -843,6 +1126,7 @@ function changeQuantity(lineId, delta) {
   const line = findCartLine(lineId);
   if (!line) return;
 
+  const itemId = line.itemId;
   const newQty = line.qty + delta;
   if (newQty <= 0) {
     removeCartLine(lineId);
@@ -859,13 +1143,26 @@ function changeQuantity(lineId, delta) {
   }
 
   updateCart();
-  renderDishes();
+  if (!isHotSide(itemId)) {
+    refreshDishCard(itemId);
+  }
 }
 
 function createCartItemElement(lineId, variant) {
   const cartEl = document.createElement('li');
   cartEl.className = `cart-item${variant === 'child' ? ' cart-item--side' : ''}`;
   cartEl.dataset.cartLineId = lineId;
+
+  const qtyHtml = variant === 'child'
+    ? ''
+    : `
+      <div class="qty-control">
+        <button type="button" class="qty-btn qty-btn--minus" data-qty-minus aria-label="${t('decrease')}">−</button>
+        <span class="qty-value"></span>
+        <button type="button" class="qty-btn" data-qty-plus aria-label="${t('increase')}">+</button>
+      </div>
+    `;
+
   cartEl.innerHTML = `
     <div class="cart-item__image-wrap">
       <img class="cart-item__image" src="" alt="">
@@ -876,11 +1173,7 @@ function createCartItemElement(lineId, variant) {
     </div>
     <div class="cart-item__side">
       <span class="cart-item__price"></span>
-      <div class="qty-control">
-        <button type="button" class="qty-btn qty-btn--minus" data-qty-minus aria-label="${t('decrease')}">−</button>
-        <span class="qty-value"></span>
-        <button type="button" class="qty-btn" data-qty-plus aria-label="${t('increase')}">+</button>
-      </div>
+      ${qtyHtml}
     </div>
   `;
   return cartEl;
@@ -892,17 +1185,27 @@ function fillCartItemElement(cartEl, line) {
 
   const mainLine = line.linkedToMainLineId ? findCartLine(line.linkedToMainLineId) : null;
   const mainItem = mainLine ? findItem(mainLine.itemId) : null;
+  const isSide = Boolean(line.linkedToMainLineId) || isHotSide(line.itemId);
 
   const imgEl = cartEl.querySelector('.cart-item__image');
   imgEl.src = item.image || DEFAULT_DISH_IMAGE;
   imgEl.alt = getItemName(item);
 
   cartEl.querySelector('.cart-item__name').textContent = getItemName(item);
-  cartEl.querySelector('.cart-item__price').textContent = formatPrice(item.price * line.qty);
-  cartEl.querySelector('.qty-value').textContent = line.qty;
+  cartEl.querySelector('.cart-item__price').textContent = item.price === 0
+    ? t('sidesIncluded')
+    : formatPrice(item.price * line.qty);
+
+  if (isSide) {
+    cartEl.classList.add('cart-item--side');
+    cartEl.querySelector('.qty-control')?.remove();
+  }
+
+  const qtyValue = cartEl.querySelector('.qty-value');
+  if (qtyValue) qtyValue.textContent = line.qty;
 
   const metaEl = cartEl.querySelector('.cart-item__meta');
-  if (line.linkedToMainLineId && mainItem) {
+  if (isSide && mainItem) {
     metaEl.textContent = tReplace('sideForMain', { name: getItemName(mainItem) });
     metaEl.hidden = false;
   } else if (isMainCourse(line.itemId)) {
@@ -1016,7 +1319,7 @@ function sendOrder() {
   state.cartLineOrder = [];
   state.lastMainLineId = null;
   updateCart();
-  renderDishes();
+  refreshDishCards();
   closeCartDrawer();
   showToast(t('orderSent'));
 }
@@ -1114,9 +1417,29 @@ function bindEvents() {
 
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
-    if (state.dishModalId) closeDishModal();
+    if (state.openSidesMainLineId) closeSidesModal();
+    else if (state.dishModalId) closeDishModal();
     else if (state.searchOpen) closeSearch();
   });
+
+  els.sidesModalBody?.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) return;
+
+    const action = btn.dataset.action;
+    if (action === 'toggle-side' && btn.dataset.itemId) {
+      const sideItemId = btn.dataset.itemId;
+      const qty = getSideQtyForMain(state.openSidesMainLineId, sideItemId);
+      if (qty > 0) removeSideFromMainLine(state.openSidesMainLineId, sideItemId);
+      else addSideToMainLine(state.openSidesMainLineId, sideItemId);
+      return;
+    }
+
+    if (action === 'sides-continue') closeSidesModal();
+  });
+
+  els.btnCloseSidesModal?.addEventListener('click', closeSidesModal);
+  els.sidesModalBackdrop?.addEventListener('click', closeSidesModal);
 
   els.cartList.addEventListener('click', (e) => {
     const cartItem = e.target.closest('.cart-item');

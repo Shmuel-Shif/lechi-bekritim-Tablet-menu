@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>לחיים בכריתים</title>
+  <link rel="icon" href="assets/logo/logo.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -36,13 +37,17 @@
 
     <div class="splash__content">
       <div class="splash__hero">
-        <img src="assets/images/logo.png" alt="לחיים בכריתים – LECHAIM The Pearl of Crete" class="splash__logo" id="splash-logo">
-        <h1 class="splash__title" data-i18n="welcome">ברוכים הבאים</h1>
+        <img src="assets/logo/logo.png" alt="לחיים בכריתים – LECHAIM The Pearl of Crete" class="splash__logo" id="splash-logo">
+        <div class="splash__welcome">
+          <p class="splash__welcome-line" data-i18n="welcome">ברוכים הבאים</p>
+          <h1 class="splash__title" data-i18n="heroRestaurant">מסעדת לחיים בכרתים</h1>
+          <p class="splash__kosher" data-i18n="kosher">כשר למהדרין</p>
+        </div>
       </div>
 
       <div class="splash__bottom">
         <button type="button" class="btn btn--navy btn--splash" id="btn-start" data-i18n="toMenu">
-          לתפריט
+          צפייה בתפריט
         </button>
       </div>
     </div>
@@ -69,14 +74,14 @@
           <div class="menu-header__brand">
             <div class="menu-header__logo-group" id="header-logo">
               <img
-                src="assets/images/logo-image.png"
+                src="assets/logo/logo-image.png"
                 alt=""
                 class="menu-header__logo-icon"
                 width="76"
                 height="76"
               >
               <img
-                src="assets/images/logo-text.png"
+                src="assets/logo/logo-text.png"
                 alt="לחיים בכריתים – LECHAIM The Pearl of Crete"
                 class="menu-header__logo-wordmark"
                 width="220"
@@ -143,10 +148,10 @@
         <div class="section-header" id="section-header">
           <h2 class="section-title" id="section-title">
             <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco" aria-hidden="true">
-            <span class="section-title__text" id="section-title-text">מנות עיקריות</span>
+            <span class="section-title__text" id="section-title-text">ראשונות ונשנושים</span>
             <img src="assets/icons/leaf-deco.svg" alt="" class="section-title__deco section-title__deco--flip" aria-hidden="true">
           </h2>
-          <p class="section-subtitle" id="section-subtitle" hidden data-i18n="mainsNote"></p>
+          <div class="section-subtitle" id="section-subtitle" hidden></div>
         </div>
       </div>
 
@@ -201,6 +206,15 @@
       </div>
     </div>
   </section>
+
+  <!-- מודל בחירת תוספת חמה -->
+  <div class="sides-modal" id="sides-modal" hidden aria-hidden="true">
+    <button type="button" class="sides-modal__backdrop" id="sides-modal-backdrop" data-i18n-aria="close" aria-label="סגור"></button>
+    <div class="sides-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="sides-modal-title">
+      <button type="button" class="sides-modal__close" id="btn-close-sides-modal" data-i18n-aria="close" aria-label="סגור">✕</button>
+      <div class="sides-modal__body" id="sides-modal-body"></div>
+    </div>
+  </div>
 
   <!-- מודל פרטי מנה -->
   <div class="dish-modal" id="dish-modal" aria-hidden="true">

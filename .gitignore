@@ -1,0 +1,6 @@
+# תלויות Node – רק לסקריפט המרת תמונות, לא לתפריט בטאבלט
+node_modules/
+scripts/node_modules/
+
+# לוגים npm
+npm-debug.log*

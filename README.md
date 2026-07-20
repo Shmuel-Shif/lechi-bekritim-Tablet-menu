@@ -1,1 +1,0 @@
-# lechi-im-kritim
